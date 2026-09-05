@@ -55,6 +55,10 @@ npx skills add gauravsaini/pager
   npx skills add gauravsaini/pager -a codex
   ```
   *(or use the included [AGENTS.md](AGENTS.md))*
+  For Codex's native GitHub skill installer, use:
+  ```bash
+  python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo gauravsaini/pager --path skills/pager
+  ```
 - **Windsurf**:
   Use the included [.windsurfrules](.windsurfrules).
 - **GitHub Copilot**:
@@ -68,6 +72,8 @@ For complete harness configuration details, see [INSTALL.md](INSTALL.md).
 
 - **Trigger**: Run `/pager`, invoke `$pager`, or request `"pager mode"`.
 - **Revert**: Say `"full text"`, `"normal mode"`, or `"verbose"` to disable.
+- **Codex auto-start**: Add a short note to `~/.codex/AGENTS.md` to use the
+  installed `pager` skill by default in every conversation.
 
 ---
 
@@ -76,6 +82,7 @@ For complete harness configuration details, see [INSTALL.md](INSTALL.md).
 ```
 pager/
   assets/logo.svg                  # Vector branding banner
+  SKILL.md                         # Root shim for repo-root skill installers
   skills/pager/SKILL.md            # Canonical skill definition
   .claude-plugin/                  # Claude Code plugin manifest & marketplace definition
   gemini-extension.json            # Gemini CLI extension manifest
