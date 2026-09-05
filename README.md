@@ -7,7 +7,7 @@
 > Ultra-short communication mode for AI coding agents: words &lt;= 5 characters, zero fluff, 100% technical intent preserved.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Compatibility](https://img.shields.io/badge/harnesses-Claude%20%7C%20Gemini%20%7C%20Codex%20%7C%20Cursor-emerald)](#installation)
+[![Compatibility](https://img.shields.io/badge/harnesses-Claude%20%7C%20Gemini%20%7C%20Antigravity%20%7C%20Codex%20%7C%20Cursor-emerald)](#installation)
 [![Token Cut](https://img.shields.io/badge/token_cut-~66%25-brightgreen)](#benchmarks--evals)
 
 `pager` reduces token usage and scanning latency by enforcing a 5-character word limit on conversational output while keeping code blocks, paths, commands, and diagnostic data completely intact.
@@ -37,6 +37,11 @@ npx skills add gauravsaini/pager
 
 ### 2. Native Harness Support
 
+- **Google Antigravity**:
+  ```bash
+  agy plugin install ./pager
+  ```
+  *(or `npx skills add gauravsaini/pager -g`)*
 - **Claude Code**:
   ```bash
   claude plugin marketplace add gauravsaini/pager && claude plugin install pager@pager
@@ -74,6 +79,8 @@ For complete harness configuration details, see [INSTALL.md](INSTALL.md).
 - **Revert**: Say `"full text"`, `"normal mode"`, or `"verbose"` to disable.
 - **Codex auto-start**: Add a short note to `~/.codex/AGENTS.md` to use the
   installed `pager` skill by default in every conversation.
+- **Antigravity auto-start**: Add `~/.gemini/config/rules/pager.md` (or `.agents/rules/pager.md`)
+  with `trigger: always_on` to activate pager mode automatically in every conversation.
 
 ---
 
@@ -82,8 +89,10 @@ For complete harness configuration details, see [INSTALL.md](INSTALL.md).
 ```
 pager/
   assets/logo.svg                  # Vector branding banner
+  plugin.json                      # Antigravity plugin manifest
   SKILL.md                         # Root shim for repo-root skill installers
   skills/pager/SKILL.md            # Canonical skill definition
+  rules/                           # Universal and Antigravity rule definitions
   .claude-plugin/                  # Claude Code plugin manifest & marketplace definition
   gemini-extension.json            # Gemini CLI extension manifest
   AGENTS.md                        # Universal agent instructions (Codex, Antigravity, OpenHands)

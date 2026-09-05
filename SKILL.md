@@ -4,6 +4,11 @@ description: >
   Pager-style communication mode: ultra-short, fast to scan, easy to grasp.
   Words <= 5 characters. Signs, short forms, and simple synonyms allowed.
   Captures intent.
+triggers:
+  - /pager
+  - pager mode
+  - use pager
+  - pager
 ---
 
 # Pager Mode
