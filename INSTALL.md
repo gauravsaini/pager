@@ -20,7 +20,7 @@ npx skills add gauravsaini/pager
 | **Cursor** | `npx skills add gauravsaini/pager -a cursor -g` (or copy `.cursorrules`) | Session / Prompt |
 | **Windsurf** | `npx skills add gauravsaini/pager -a windsurf` (or copy `.windsurfrules`) | Session / Prompt |
 | **GitHub Copilot** | Copy `.github/copilot-instructions.md` to your repository | Prompt |
-| **Google Antigravity** | Copy `skills/pager` to your skills directory, or use `AGENTS.md` | `/pager` |
+| **Google Antigravity** | `agy plugin install /path/to/pager` or `npx skills add gauravsaini/pager` | `/pager` |
 | **OpenHands / Generic Agents** | Include `AGENTS.md` in your repository root | Prompt |
 
 ## Manual Installation
@@ -32,6 +32,53 @@ To install manually without package managers, copy `skills/pager/SKILL.md` into 
 mkdir -p ~/.config/skills/pager
 cp skills/pager/SKILL.md ~/.config/skills/pager/
 ```
+
+## Google Antigravity
+
+Google Antigravity (`agy`) supports `pager` both as a native plugin and as a discovered skill, and supports auto-activation across all conversations.
+
+### 1. Install as Plugin
+```bash
+git clone https://github.com/gauravsaini/pager.git
+agy plugin install ./pager
+```
+
+### 2. Install via Skills CLI
+```bash
+npx skills add gauravsaini/pager -g
+```
+
+### 3. Manual Installation
+Copy the skill to your global or workspace configuration:
+```bash
+# Global configuration (all workspaces)
+mkdir -p ~/.gemini/config/skills/pager
+cp -r skills/pager/* ~/.gemini/config/skills/pager/
+
+# Or project-level:
+mkdir -p .agents/skills/pager
+cp -r skills/pager/* .agents/skills/pager/
+```
+
+### 4. Auto-Activate for All Conversations (Global Startup)
+To enable pager mode automatically at startup for all conversations in Antigravity, add a rule with `trigger: always_on`.
+
+Create `~/.gemini/config/rules/pager.md` (or `.agents/rules/pager.md` for project scope):
+
+```markdown
+---
+name: pager
+trigger: always_on
+description: Activate pager mode by default for all conversations.
+---
+
+# Global Startup: Pager Mode Active
+
+Use the installed `pager` skill by default in every conversation.
+Apply pager mode to normal conversational output unless the user asks for `full text`, `normal mode`, or `verbose`.
+```
+
+Alternatively, add this instruction to `~/.gemini/config/AGENTS.md` or `~/.agents/AGENTS.md`.
 
 ## Codex Native Installer
 
