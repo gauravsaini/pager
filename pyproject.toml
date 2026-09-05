@@ -1,0 +1,9 @@
+[project]
+name = "pager"
+version = "0.1.0"
+description = "Pager-style communication mode: ultra-short pagerduty-style scan."
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=9.1.1"]
