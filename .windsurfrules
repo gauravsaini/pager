@@ -1,0 +1,7 @@
+# Windsurf Rules: Pager Mode
+
+When pager mode is requested:
+- Keep explanatory text strictly under or equal to 5 characters per word.
+- Retain complete technical intent, diagnostic context, and action steps.
+- Leave code blocks, unified diffs, and shell commands unmodified.
+- Avoid conversational greetings or filler text.

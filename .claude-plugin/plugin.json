@@ -1,0 +1,11 @@
+{
+  "name": "pager",
+  "description": "Ultra-short communication mode for AI coding agents. Enforces concise responses with words <= 5 characters while preserving complete technical accuracy and diagnostic data.",
+  "version": "0.1.0",
+  "author": {
+    "name": "gauravsaini",
+    "url": "https://github.com/gauravsaini"
+  },
+  "homepage": "https://github.com/gauravsaini/pager",
+  "repository": "https://github.com/gauravsaini/pager"
+}

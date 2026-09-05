@@ -1,0 +1,11 @@
+{
+  "name": "pager",
+  "plugins": [
+    {
+      "name": "pager",
+      "description": "Ultra-short communication mode for AI agents. Words <= 5 characters, zero fluff, full intent.",
+      "version": "0.1.0",
+      "source": "./"
+    }
+  ]
+}

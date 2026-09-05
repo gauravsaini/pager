@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C14" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#0A0F1D" />
+    </linearGradient>
+
+    <radialGradient id="emeraldAura" cx="20%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="indigoAura" cx="80%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Pager Chassis Gradients -->
+    <linearGradient id="chassisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="40%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <linearGradient id="clipGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#475569" />
+      <stop offset="50%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+
+    <!-- LCD Display Gradients -->
+    <linearGradient id="lcdGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#022C22" />
+      <stop offset="100%" stop-color="#064E3B" />
+    </linearGradient>
+
+    <linearGradient id="lcdGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.18" />
+      <stop offset="40%" stop-color="#10B981" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.3" />
+    </linearGradient>
+
+    <!-- Button Gradient -->
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="ledBloom" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4.5" result="blur1" />
+      <feGaussianBlur stdDeviation="1.5" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Subtle Dot Pattern -->
+    <pattern id="dotGrid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="#334155" opacity="0.3" />
+    </pattern>
+  </defs>
+
+  <!-- Outer Card Frame -->
+  <rect width="800" height="220" rx="16" fill="url(#bgGrad)" stroke="#1E293B" stroke-width="1.5" />
+  <rect width="800" height="220" rx="16" fill="url(#dotGrid)" />
+
+  <!-- Ambient Light Highlights -->
+  <rect width="800" height="220" rx="16" fill="url(#emeraldAura)" />
+  <rect width="800" height="220" rx="16" fill="url(#indigoAura)" />
+
+  <!-- ==================== PAGER HARDWARE UNIT ==================== -->
+  <g id="pager-hardware">
+    <!-- Antenna Stub & Signal Radiation -->
+    <rect x="70" y="24" width="10" height="12" rx="3" fill="url(#clipGrad)" stroke="#475569" stroke-width="1" />
+    <circle cx="75" cy="24" r="3" fill="#64748B" />
+
+    <!-- Radio Transmission Waves from Antenna -->
+    <g opacity="0.85">
+      <path d="M 66 18 A 12 12 0 0 0 54 10" stroke="#10B981" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.85" />
+      <path d="M 68 12 A 20 20 0 0 0 46 6" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.5" />
+      <path d="M 72 6 A 28 28 0 0 0 38 4" stroke="#10B981" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.25" />
+    </g>
+
+    <!-- Top Belt Holster Clip -->
+    <rect x="105" y="24" width="80" height="14" rx="4" fill="url(#clipGrad)" stroke="#475569" stroke-width="1" />
+    <rect x="120" y="27" width="50" height="4" rx="2" fill="#0B0F19" />
+    <line x1="130" y1="24" x2="130" y2="38" stroke="#334155" stroke-width="1" />
+    <line x1="160" y1="24" x2="160" y2="38" stroke="#334155" stroke-width="1" />
+
+    <!-- Side Bumper Ridges (Tactile Grips) -->
+    <rect x="51" y="65" width="4" height="20" rx="2" fill="#334155" />
+    <rect x="51" y="92" width="4" height="20" rx="2" fill="#334155" />
+    <rect x="51" y="119" width="4" height="20" rx="2" fill="#334155" />
+
+    <rect x="257" y="65" width="4" height="20" rx="2" fill="#334155" />
+    <rect x="257" y="92" width="4" height="20" rx="2" fill="#334155" />
+    <rect x="257" y="119" width="4" height="20" rx="2" fill="#334155" />
+
+    <!-- Main Pager Chassis -->
+    <rect x="53" y="34" width="206" height="152" rx="14" fill="url(#chassisGrad)" stroke="#475569" stroke-width="1.5" />
+    <!-- Beveled Inset Border -->
+    <rect x="57" y="38" width="198" height="144" rx="10" fill="none" stroke="#0F172A" stroke-width="1.5" />
+
+    <!-- Top Status LED Indicator -->
+    <circle cx="236" cy="48" r="4.5" fill="#10B981" filter="url(#ledBloom)" />
+    <circle cx="236" cy="48" r="2" fill="#ECFDF5" />
+
+    <!-- Pager Model Stamped Label -->
+    <text x="92" y="49" fill="#64748B" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="8" font-weight="700" letter-spacing="1">SYN-900 // ALPHA</text>
+
+    <!-- LCD Display Screen Window -->
+    <!-- Screen Bezel -->
+    <rect x="68" y="56" width="176" height="84" rx="8" fill="#020617" stroke="#1E293B" stroke-width="1.5" />
+
+    <!-- Screen Glass & Phosphor Matrix Background -->
+    <rect x="73" y="61" width="166" height="74" rx="5" fill="url(#lcdGrad)" stroke="#065F46" stroke-width="1" />
+    <rect x="73" y="61" width="166" height="74" rx="5" fill="url(#lcdGlass)" />
+
+    <!-- Screen Top Bar: Signal, Channel, Battery -->
+    <!-- Signal Bars -->
+    <rect x="81" y="73" width="2.5" height="3" rx="0.5" fill="#34D399" />
+    <rect x="85" y="71" width="2.5" height="5" rx="0.5" fill="#34D399" />
+    <rect x="89" y="69" width="2.5" height="7" rx="0.5" fill="#34D399" />
+    <rect x="93" y="67" width="2.5" height="9" rx="0.5" fill="#34D399" />
+
+    <!-- Status Flags -->
+    <text x="102" y="75" fill="#34D399" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="7.5" font-weight="700" letter-spacing="0.5">PAGE-01</text>
+    <text x="156" y="75" fill="#10B981" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="7.5" font-weight="700">900MHz</text>
+
+    <!-- Battery Indicator -->
+    <rect x="214" y="68" width="16" height="8" rx="1.5" fill="none" stroke="#34D399" stroke-width="1" />
+    <rect x="216" y="70" width="11" height="4" rx="0.5" fill="#34D399" />
+    <rect x="230" y="70.5" width="1.5" height="3" rx="0.5" fill="#34D399" />
+
+    <!-- Divider Line Inside LCD -->
+    <line x1="81" y1="80" x2="229" y2="80" stroke="#065F46" stroke-width="0.8" opacity="0.6" />
+
+    <!-- LCD Display Message Body -->
+    <g filter="url(#glowGreen)">
+      <text x="81" y="96" fill="#A7F3D0" font-family="'SF Mono', 'Cascadia Code', Menlo, monospace" font-size="12" font-weight="800" letter-spacing="0.5">[SEV1] ACK NOW</text>
+      <text x="81" y="113" fill="#6EE7B7" font-family="'SF Mono', 'Cascadia Code', Menlo, monospace" font-size="10.5" font-weight="700" letter-spacing="0.8">WORD &lt;= 5 CHR</text>
+      <text x="81" y="126" fill="#34D399" font-family="'SF Mono', 'Cascadia Code', Menlo, monospace" font-size="8.5" font-weight="600" opacity="0.9">RUN &gt; ZERO FLUFF</text>
+    </g>
+
+    <!-- LCD Cursor Box -->
+    <rect x="184" y="118" width="6" height="8" fill="#34D399" opacity="0.85">
+      <animate attributeName="opacity" values="0.85;0.1;0.85" dur="1.2s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Glass Reflection Slash across Screen -->
+    <polygon points="73,61 140,61 105,135 73,135" fill="#FFFFFF" opacity="0.04" />
+
+    <!-- Speaker Slits (Lower Left) -->
+    <line x1="74" y1="152" x2="114" y2="152" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="74" y1="157" x2="114" y2="157" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="74" y1="162" x2="114" y2="162" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="74" y1="167" x2="114" y2="167" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Physical Hardware Control Buttons (Lower Right) -->
+    <!-- Button Left (Nav Up) -->
+    <rect x="135" y="150" width="22" height="18" rx="4" fill="url(#btnGrad)" stroke="#475569" stroke-width="1" />
+    <polygon points="146,155 141,162 151,162" fill="#94A3B8" />
+
+    <!-- Button Center (ACK / Enter) -->
+    <rect x="163" y="148" width="28" height="22" rx="5" fill="url(#btnGrad)" stroke="#10B981" stroke-width="1.2" />
+    <circle cx="177" cy="159" r="4.5" fill="#10B981" />
+    <circle cx="177" cy="159" r="2" fill="#D1FAE5" />
+
+    <!-- Button Right (Nav Down) -->
+    <rect x="197" y="150" width="22" height="18" rx="4" fill="url(#btnGrad)" stroke="#475569" stroke-width="1" />
+    <polygon points="208,163 203,156 213,156" fill="#94A3B8" />
+  </g>
+
+  <!-- ==================== BRANDING & TYPOGRAPHY ==================== -->
+  <g id="brand-typography">
+    <!-- Top Pill Badge: Mode Indicator -->
+    <g transform="translate(296, 36)">
+      <rect width="168" height="24" rx="12" fill="#020617" stroke="#1E293B" stroke-width="1" />
+      <circle cx="12" cy="12" r="3.5" fill="#10B981" filter="url(#ledBloom)" />
+      <circle cx="12" cy="12" r="1.5" fill="#FFFFFF" />
+      <text x="24" y="15.5" fill="#34D399" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="9" font-weight="700" letter-spacing="1">COMMS MODE // V1.0</text>
+    </g>
+
+    <!-- Main Product Logotype: "pager" -->
+    <text x="294" y="112" fill="#F8FAFC" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="58" font-weight="900" letter-spacing="-2">pager</text>
+    
+    <!-- Phosphor Dot on Logotype Accent -->
+    <rect x="449" y="70" width="9" height="9" rx="2" fill="#10B981" filter="url(#glowGreen)" />
+
+    <!-- Tagline -->
+    <text x="296" y="136" fill="#94A3B8" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="500" letter-spacing="-0.2">
+      Ultra-short comms mode: fast 2 scan, ezy 2 grasp, zero fluff.
+    </text>
+
+    <!-- Feature Attribute Chips -->
+    <g transform="translate(296, 154)">
+      <!-- Chip 1: Word Limit -->
+      <g transform="translate(0, 0)">
+        <rect width="140" height="26" rx="6" fill="#0B132B" stroke="#1E293B" stroke-width="1" />
+        <text x="70" y="17" text-anchor="middle" fill="#38BDF8" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="700">WORD &lt;= 5 CHAR</text>
+      </g>
+
+      <!-- Chip 2: Token Cut -->
+      <g transform="translate(150, 0)">
+        <rect width="150" height="26" rx="6" fill="#022C22" stroke="#065F46" stroke-width="1" />
+        <text x="75" y="17" text-anchor="middle" fill="#34D399" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="700">⚡ ~66% TOKEN CUT</text>
+      </g>
+
+      <!-- Chip 3: Full Intent -->
+      <g transform="translate(310, 0)">
+        <rect width="140" height="26" rx="6" fill="#180D2B" stroke="#3B1D61" stroke-width="1" />
+        <text x="70" y="17" text-anchor="middle" fill="#C084FC" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="700">MAX INTENT KEPT</text>
+      </g>
+    </g>
+  </g>
+</svg>

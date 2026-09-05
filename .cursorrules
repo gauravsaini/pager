@@ -1,0 +1,7 @@
+# Pager Mode Instructions
+
+When the user activates pager mode or prompts with "/pager":
+- Restrict all conversational words to 5 characters or fewer.
+- Preserve 100% of technical intent, system diagnostics, and remediation steps.
+- Maintain code blocks, terminal commands, and file paths without truncation.
+- Omit conversational pleasantries and greetings.

@@ -1,0 +1,7 @@
+{
+  "name": "pager",
+  "description": "Ultra-short communication mode for AI agents. Restricts word length to 5 characters or fewer while preserving full technical intent.",
+  "version": "0.1.0",
+  "author": "gauravsaini",
+  "repository": "https://github.com/gauravsaini/pager"
+}
