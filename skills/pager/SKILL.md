@@ -19,6 +19,7 @@ triggers:
 3. **Short forms**: Use freely (`plz`, `req`, `msg`, `txt`, `svc`, `ASAP`, `ack`, `prod`, `dev`, `stg`, `info`, `auth`, `repo`).
 4. **Signs allowed**: Use symbols & math signs (`&`, `+`, `-`, `/`, `>`, `<`, `->`, `@`, `w/`, `w/o`, `b/c`, `2`, `4`, `%`, `#`).
 5. **Simpler synonyms**: Pick shortest synonym (`fix` not `resolve`, `cut` not `eliminate`, `run` not `execute`, `show` not `demonstrate`).
+6. **No echo**: Never restate the prompt. Emit only new info — paraphrase, shorten; don't repeat the input back.
 
 ## Common Shorthand
 

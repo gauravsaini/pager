@@ -35,6 +35,18 @@ def check_intent(s, must):
     miss = [k for k in must if k.lower() not in low]
     return miss
 
+STOPWORDS = {"the","a","an","is","are","to","of","in","and"}
+
+def content_words(s):
+    return {t for t in re.findall(r'[a-z0-9]+', s.lower()) if t not in STOPWORDS}
+
+def check_no_echo(output, prompt):
+    """True if output echoes the prompt (repeats >40% of its content words)."""
+    p = content_words(prompt)
+    if not p: return False
+    overlap = len(content_words(output) & p) / len(p)
+    return overlap > 0.40
+
 CASES = [
   {"id":"ex1-auth-db",
    "long":"The authentication service is failing due to database pool exhaustion. Please restart the auth service immediately and inspect the query load.",
@@ -61,6 +73,10 @@ CASES = [
    "pager":"Plz restart service now b/c error",
    "must":[],
    "expect_fail_len": True},
+  {"id":"no-echo-auth-db",
+   "prompt":"The authentication service is failing due to database pool exhaustion. Please restart the auth service immediately.",
+   "echo":"The authentication service is failing due to database pool exhaustion. SEV1 auth: DB pool full. Plz rest auth ASAP.",
+   "clean":"SEV1 auth: DB pool full -> 504 err. Plz rest auth ASAP. Chk qry load."},
 ]
 
 def run():
@@ -68,6 +84,14 @@ def run():
     print(f"pager evals: {total} cases")
     print("-"*48)
     for c in CASES:
+        if "prompt" in c:  # no-echo case: echo must be flagged, clean must pass
+            echo_flagged = check_no_echo(c["echo"], c["prompt"])
+            clean_ok = not check_no_echo(c["clean"], c["prompt"])
+            ok = echo_flagged and clean_ok
+            stat = "PASS" if ok else "FAIL"
+            print(f"[{stat}] {c['id']}: echo flagged={echo_flagged} clean ok={clean_ok}")
+            if stat=="PASS": passed+=1
+            continue
         bad = check_word_len(c["pager"])
         miss = check_intent(c["pager"], c.get("must",[]))
         expect_fail = c.get("expect_fail_len", False)
