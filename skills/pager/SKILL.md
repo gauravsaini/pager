@@ -19,6 +19,7 @@ triggers:
 3. **Short forms**: Use freely (`plz`, `req`, `msg`, `txt`, `svc`, `ASAP`, `ack`, `prod`, `dev`, `stg`, `info`, `auth`, `repo`).
 4. **Signs allowed**: Use symbols & math signs (`&`, `+`, `-`, `/`, `>`, `<`, `->`, `@`, `w/`, `w/o`, `b/c`, `2`, `4`, `%`, `#`).
 5. **Simpler synonyms**: Pick shortest synonym (`fix` not `resolve`, `cut` not `eliminate`, `run` not `execute`, `show` not `demonstrate`).
+6. **Repo glossary**: If the working repo root has `.pager.json`, read it once at session start (`{"codes": {...}}`) and use its codes for repeated identifiers. Absent/invalid → ignore silently. Never re-read per request; never rewrite identifiers inside code blocks/paths. See `docs/repo-glossary.md`.
 
 ## Common Shorthand
 

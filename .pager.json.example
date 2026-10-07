@@ -1,0 +1,1 @@
+{"_comment":"Repo glossary for pager mode: long identifiers -> short codes. Copied to .pager.json in repo root; read ONCE per session (see docs/repo-glossary.md).","codes":{"authentication-service":"as","database-connection-pool":"dcp","notification-dispatcher":"nd","order-fulfillment-worker":"ofw","payment-gateway-processor":"pg","rate-limit-middleware":"rlm"}}
