@@ -34,7 +34,13 @@ triggers:
 | production | `prod` | staging | `stg` |
 | update | `upd` | delete | `del` |
 | restart | `rest` | return | `ret` |
+| pull request | `PR` | code review | `CR` |
+| work in progress | `WIP` | connection pool | `pool` |
+| status code | `code` | | |
 
+<!-- tokenizer-verified skips (tiktoken cl100k_base, delta = 0):
+     - error handling -> errhdl: 2 -> 2, zero gain
+     - end to end -> e2e: 3 -> 3, zero gain -->
 ## Pattern
 
 ```
