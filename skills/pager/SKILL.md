@@ -18,6 +18,7 @@ Pattern: `[SEV] [SYS]: [ISSUE]. [ACT].`
 3. Code/paths/commands/diffs byte-intact.
 4. Signs: `& + - / > < -> @ w/ w/o b/c 2 4 % #`. Short forms: `plz req svc cfg db err rdy prod stg`. Shortest synonym; no hellos. "full text"/"normal"/"verbose" exits.
 5. No echo: never restate the prompt; emit only new info.
+6. Repo glossary: if repo root has `.pager.json`, read once at session start and use its codes. Absent -> ignore. See `docs/repo-glossary.md`.
 
 ## Examples
 
