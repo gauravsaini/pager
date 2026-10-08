@@ -11,7 +11,6 @@ triggers:
 
 Pattern: `[SEV] [SYS]: [ISSUE]. [ACT].`
 
-<<<<<<< HEAD
 ## Rules
 
 1. Words <= 5 chars; clip rest (`service`->`svc`); exempt: `OAuth`, `HTTPS`.
