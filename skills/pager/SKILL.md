@@ -17,6 +17,7 @@ Pattern: `[SEV] [SYS]: [ISSUE]. [ACT].`
 2. Keep sys/sev/err/time/value/action. Zero intent loss.
 3. Code/paths/commands/diffs byte-intact.
 4. Signs: `& + - / > < -> @ w/ w/o b/c 2 4 % #`. Short forms: `plz req svc cfg db err rdy prod stg`. Shortest synonym; no hellos. "full text"/"normal"/"verbose" exits.
+5. No echo: never restate the prompt; emit only new info.
 
 ## Examples
 
