@@ -11,6 +11,7 @@ triggers:
 
 Pattern: `[SEV] [SYS]: [ISSUE]. [ACT].`
 
+<<<<<<< HEAD
 ## Rules
 
 1. Words <= 5 chars; clip rest (`service`->`svc`); exempt: `OAuth`, `HTTPS`.
@@ -19,6 +20,7 @@ Pattern: `[SEV] [SYS]: [ISSUE]. [ACT].`
 4. Signs: `& + - / > < -> @ w/ w/o b/c 2 4 % #`. Short forms: `plz req svc cfg db err rdy prod stg PR CR WIP pool code ASAP`. Shortest synonym; no hellos. "full text"/"normal"/"verbose" exits.
 5. No echo: never restate the prompt; emit only new info.
 6. Repo glossary: if repo root has `.pager.json`, read once at session start and use its codes. Absent -> ignore. See `docs/repo-glossary.md`.
+7. Intent budgets: ack = 1 line; status <= 3 lines; debug = `[SEV/STAT] [SYS]: [ISSUE/DATA]. [ACT/ETA].`; data = 1 item/line, no prose.
 
 <!-- tokenizer-verified skips (tiktoken cl100k_base, delta = 0):
      - error handling -> errhdl: 2 -> 2, zero gain
